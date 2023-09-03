@@ -1,37 +1,37 @@
-# Coleta de Dados de Ginecologistas em MG (Doctoralia)
+# Data Collection from Gynecologists in MG (Doctoralia)
 
-## Objetivo
+## Goal
 
-Este código é uma solução para a coleta de dados de todos os ginecologistas em Belo Horizonte, MG, a partir do site da Doctoralia. Ele extrai informações como a cidade, nome, telefone e link de cada perfil de ginecologista.
+This code is a solution for collecting data from all gynecologists in Belo Horizonte, MG, from the Doctoralia website. It extracts information such as city, name, phone and link from each gynecologist profile.
 
-## Funcionalidade
+## Functionality
 
-O código utiliza a biblioteca BeautifulSoup para realizar o web scraping e coletar os dados dos perfis de ginecologistas. Ele começa visitando cada página de resultados de busca no site da Doctoralia e coletando os links dos perfis de doutores e clínicas. Em seguida, ele filtra esses links para garantir que apenas os perfis de ginecologistas sejam considerados.
+The code uses the BeautifulSoup library to perform web scraping and collect data from gynecologist profiles. It starts by visiting each search results page on the Doctoralia website and collecting links to doctor and clinic profiles. It then filters these links to ensure that only gynecologist profiles are considered.
 
-Para cada perfil, o código coleta o nome, cidade e telefone. Caso algum desses campos não seja encontrado, ele retorna um ponto de interrogação. Os dados coletados são armazenados em um DataFrame do pandas.
+For each profile, the code collects the name, city and phone number. If any of these fields is not found, it returns a question mark. The collected data is stored in a pandas DataFrame.
 
-## Módulos Utilizados
+## Modules Used
 
-- `BeautifulSoup`: Biblioteca para análise e extração de dados de HTML e XML.
-- `requests`: Biblioteca para realizar requisições HTTP.
-- `pandas`: Biblioteca para manipulação de dados em formato tabular.
-- `re`: Módulo para manipulação de expressões regulares.
-- `os`: Módulo para interagir com o sistema operacional, usado para exclusão de arquivos auxiliares.
+- `BeautifulSoup`: Library for parsing and extracting data from HTML and XML.
+- `requests`: Library to perform HTTP requests.
+- `pandas`: Library for manipulating data in tabular format.
+- `re`: Module for handling regular expressions.
+- `os`: Module to interact with the operating system, used for deleting auxiliary files.
 
-## Uso
+## Usage
 
-1. **Iniciar a Coleta**: O código instância a classe `Coleta` e chama o método `iniciar()` para começar a coleta dos dados.
-2. **Coleta dos Dados**: O código navega por todas as páginas de resultados da busca e extrai os links dos perfis de ginecologistas.
-3. **Filtragem dos Links**: Ele filtra os links para incluir apenas os perfis relevantes.
-4. **Coleta das Informações**: Para cada perfil, ele extrai o nome, cidade e telefone, armazenando-os no DataFrame.
-5. **Exclusão de Arquivos Auxiliares**: Os arquivos temporários criados durante a coleta são excluídos.
-6. **Exportação dos Dados**: Os dados são exportados para um arquivo Excel chamado `dados.xlsx`.
+1. **Start Collection**: The code instances the `Collection` class and calls the `start()` method to start collecting data.
+2. **Data Collection**: The code navigates through all search results pages and extracts links from gynecologist profiles.
+3. **Link Filtering**: It filters links to only include relevant profiles.
+4. **Information Collection**: For each profile, it extracts the name, city and phone, storing them in the DataFrame.
+5. **Exclusion of Auxiliary Files**: Temporary files created during collection are excluded.
+6. **Data Export**: The data is exported to an Excel file named `data.xlsx`.
 
-## Observações
+## Comments
 
-- O código é projetado para coletar informações dos 82 perfis de ginecologistas em Belo Horizonte. Se a quantidade de perfis mudar, isso deve ser ajustado.
-- O código pode ser adaptado para outros casos de uso semelhantes, mas lembre-se de verificar as políticas de uso do site antes de fazer web scraping.
+- The code is designed to collect information from the 82 profiles of gynecologists in Belo Horizonte. If the amount of profiles changes, this must be adjusted.
+- The code can be adapted for other similar use cases, but remember to check the site's usage policies before web scraping.
 
 ## Disclaimer
 
-Este código é apresentado apenas para fins educativos e informativos. Certifique-se de que o uso do web scraping esteja em conformidade com os termos de uso do site alvo.
+This code is displayed for educational and informational purposes only. Make sure your use of web scraping complies with the target site's terms of use.
